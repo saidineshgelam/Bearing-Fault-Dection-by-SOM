@@ -1,0 +1,15 @@
+A rotor-bearing testbed (Figure 1) was built to analyze the health condition of the shaft with unbalance defects.The rotating speed of the test-bed is 20 Hz, and screws were added on the disk of the shaft to induce unbalance defects as shown in Figure 2. An accelerometer was mounted on the bearing block and to measure the bearing's vibrations. The vibration data were collected under balanced and unbalanced conditions at a rate of 2560 Hz
+![image](https://github.com/saidineshgelam/Bearing-Fault-Dection-by-SOM/assets/144295692/16e279e8-7660-4afb-8482-665304a9438c)
+
+
+![image](https://github.com/saidineshgelam/Bearing-Fault-Dection-by-SOM/assets/144295692/dbc8cfe8-5ce7-4663-9f50-36a78ed140ad)
+
+igure 7 compares the results from Logistic Regression (LR )against those of the SOM-MQE using the 1X harmonic only for training. In both cases, distinct regions appear in the plots which correspond to the labels provided for the testing set. Looking at the left hand side of the figure it becomes clear that LR predicts a value of ~0.75 for healthy, ~0.375 for unbalanced 1, and ~0.0 for unbalanced 2. The results for SOM-MQE are somewhat less clear. The difference in predicted confidence value (CV) for healthy (CV =1.0) and unbalanced 1 (CV = 0.9) is only 0.1, while the CV for unbalanced 2 ranges from 0.0 to 0.6. While we know the correct labels for each sample in this testing set, the significant variation in the prediction for unbalanced 2 should caution its use.
+
+![image](https://github.com/saidineshgelam/Bearing-Fault-Dection-by-SOM/assets/144295692/0aed100d-1b5a-48bd-9e3f-8663ca694f45)
+![image](https://github.com/saidineshgelam/Bearing-Fault-Dection-by-SOM/assets/144295692/1f5d31b7-b870-452d-ac9d-00afd0df3b33)
+![image](https://github.com/saidineshgelam/Bearing-Fault-Dection-by-SOM/assets/144295692/d206f539-6cae-43b4-91ed-7bf6ab2ed50b)
+![image](https://github.com/saidineshgelam/Bearing-Fault-Dection-by-SOM/assets/144295692/01260406-8141-4653-86a3-68647443af2f)
+
+
+PCA was utilized to identify the most relevant features for distinguishing between healthy and faulty conditions. The analysis revealed that the 1X harmonic and 2X harmonic are the most significant variables, while other features such as RMS and standard deviation had minimal significance. SOM analysis was performed to classify the testing data into different health states. The results showed that the SOM model accurately classified the samples into healthy, unbalance 1, and unbalance 2 conditions based on the extracted features. Logistic regression was also employed (on the same data set )as a classification algorithm to predict the health state of the machinery based on the selected features. The model effectively classified the testing data into healthy and faulty conditions, with clear distinctions between different levels of unbalanced defects. Both SOM and logistic regression models demonstrated promising performance in classifying the health state of the rotor-bearing system. The analysis provided valuable insights into the effectiveness of different machine learning techniques for fault diagnosis in rotating machinery.
